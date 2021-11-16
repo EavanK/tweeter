@@ -45,3 +45,7 @@ button {
 button:hover {
   background-color: #000836;
 }
+/* if textarea character is greater than 140, color red */
+.red {
+  color: red;
+}
