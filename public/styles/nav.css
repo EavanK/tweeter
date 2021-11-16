@@ -9,21 +9,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
 .logo {
   font-size: 40px;
-  margin-top: 30px;
 }
 
 .write {
-  margin-bottom: 0px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .fas {
-  color: red;
+  color: #bf5900;
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
 }
