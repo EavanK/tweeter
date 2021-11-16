@@ -1,0 +1,32 @@
+textarea {
+  width: 900px;
+  height: 40px;
+  background-color: #fce6c3;
+  border: none;
+  resize: none;
+  border-bottom: 5px solid black;
+}
+textarea:focus {
+  outline: none;
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  padding-top: 20px;
+}
+
+button {
+  background-color: #4056A1;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+  font-size: 30px;
+  padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+button:hover {
+  background-color: #000836;
+}
