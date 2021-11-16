@@ -20,6 +20,14 @@ body {
   font-size: 24px;
 }
 
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+/* Add font Source Sans pro */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
