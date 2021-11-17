@@ -12,6 +12,6 @@
   padding-top: 150px;
 }
 
-.name {
-  margin-top: -50px;
+div > h2{
+  margin-top: 0
 }
