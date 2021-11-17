@@ -18,6 +18,9 @@ nav {
 
 .write {
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5em;
 }
 
 .fas {
