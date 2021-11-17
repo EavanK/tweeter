@@ -17,9 +17,11 @@
 .tweet-header {
   width: 83vw;
   height: 10vh;
-  padding-top: 1.5em;
+  padding-top: 1em;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-content: center;
 }
 /* main */
 .tweet-main {
@@ -31,28 +33,42 @@
   justify-content: start;
   font-weight: bold;
 }
+/* img and name */
+div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+/* user name */
+.name {
+  margin-top: 0;
+  padding-left: 0.5em;
+  display: flex;
+  align-self: center;
+}
 /* user ID */
 .user-link {
   color: #c7c7c7;
   size: 2em;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
-
+/* time and icon */
 footer {
   font-size: 17px;
   width: 80vw;
   display: flex;
   justify-content: space-between;
   margin: 20px;
+  margin-top: 10px;
 }
-
 /* icon */
 .icon {
   color: #4056A1;
   width: 8vw;
   display: flex;
   justify-content: space-between;
-  margin-top: -10px;
 }
 /* each icon hover */
 .icon > i:hover {
