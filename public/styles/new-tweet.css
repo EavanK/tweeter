@@ -4,11 +4,13 @@ textarea {
   background-color: #fce6c3;
   border: none;
   resize: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #545149;
 }
 textarea:focus {
   outline: none;
 }
+
+/* Add textarea scrollbar style */
 textarea::-webkit-scrollbar {
   width: 10px;
 }
@@ -24,12 +26,13 @@ textarea::-webkit-scrollbar-track {
   box-shadow: inset 0px 0px 5px white;
 }
 
-
+/* button and character count */
 .active {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 button {
@@ -45,6 +48,12 @@ button {
 button:hover {
   background-color: #000836;
 }
+
+/* Add space bottom of secction */
+.new-tweet {
+  margin-bottom: 2em;
+}
+
 /* if textarea character is greater than 140, color red */
 .red {
   color: red;
