@@ -14,7 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
     rel="stylesheet">
-  <!-- External, App, nav, header, new-tweet, CSS -->
+  <!-- External, App, nav, header, new-tweet, article CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -22,10 +22,12 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/article.css" type="text/css" />
-  <!-- External, App, Char-counter JS -->
+  <!-- External, App, Char-counter, client JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script src="/scripts/client.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
+  <script src="/scripts/client.js"></script>
+
 </head>
 
 <body>
@@ -66,14 +68,17 @@
     <section class="user-tweet">
       <article class="tweet">
         <header class="tweet-header">
-          <span><i class="far fa-smile"></i> Rhoada Jacobs</span>
-          <span class="user-link">@MrsJacobs</span>
+          <div>
+            <img src="https://i.imgur.com/73hZDYK.png" width="60" height="60">
+            <span class="name">Eavan Kim</span>
+          </div>
+          <span class="user-link">@MrKim</span>
         </header>
         <main class="tweet-main">
-          <p>If I have seen furter it is by standing on the shoulders of giants</p>
+          <p>I can do it, I can do it!</p>
         </main>
         <footer>
-          <span>10 days ago</span>
+          <span>1 days ago</span>
           <div class="icon">
             <i class="fa fa-flag"></i>
             <i class="fa fa-retweet"></i>
