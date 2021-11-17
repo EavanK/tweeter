@@ -2,7 +2,8 @@ $(document).ready(function() {
   
   $("#tweet-text").on('input', function(event) {
 
-    const count = $(this).closest("form").find(".counter")
+    const count = $(this).parent().find("output");
+    // const count = $(this).closest("form").find(".counter");
     
     const letterCount = $(this).val().length;
 
