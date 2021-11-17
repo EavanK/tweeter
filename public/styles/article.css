@@ -33,11 +33,9 @@
   justify-content: start;
   font-weight: bold;
 }
-/* img and name */
+/*img and name */
 div {
   display: flex;
-  align-content: center;
-  justify-content: center;
 }
 /* user name */
 .name {
