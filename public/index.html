@@ -14,7 +14,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
     rel="stylesheet">
-  <!-- External, App, nav, header, new-tweet, article CSS -->
+
+  <!-- External, layout, nav, header, new-tweet, article CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -22,11 +23,14 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/article.css" type="text/css" />
-  <!-- External, App, Char-counter, client JS -->
+  <!-- External, client, Char-counter JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/scripts/client.js"></script>
   <script src="/scripts/composer-char-counter.js"></script>
-  <script src="/scripts/client.js"></script>
+  <!-- timeago.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -44,7 +48,7 @@
       <img src="/images/profile-hex.png">
     </div>
     <br>
-    <div class="avatar name">
+    <div class="avatar-name">
       <h2>Your Name</h2>
     </div>
   </header>
@@ -65,28 +69,7 @@
       </form>
     </section>
     <!-- tweet article -->
-    <section class="user-tweet">
-      <article class="tweet">
-        <header class="tweet-header">
-          <div>
-            <img src="https://i.imgur.com/73hZDYK.png" width="60" height="60">
-            <span class="name">Eavan Kim</span>
-          </div>
-          <span class="user-link">@MrKim</span>
-        </header>
-        <main class="tweet-main">
-          <p>I can do it, I can do it!</p>
-        </main>
-        <footer>
-          <span>1 days ago</span>
-          <div class="icon">
-            <i class="fa fa-flag"></i>
-            <i class="fa fa-retweet"></i>
-            <i class="fa fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    </section>
+    <section class="user-tweet"></section>
   </main>
 </body>
 
