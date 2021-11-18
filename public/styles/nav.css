@@ -2,7 +2,6 @@ nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
-  color: #FFFFFF;
   font-family: 'Bungee', cursive;
   padding-right: 1.5em;
   padding-left: 1.5em;
@@ -12,23 +11,28 @@ nav {
   position: fixed;
 }
 
+nav button {
+  background-color: #4056A1;
+  border: none;
+  color: #FFFFFF
+}
+nav button:hover {
+  background-color: #8240a100;
+}
+
 nav > button {
   font-size: 40px;
 }
 
-nav div {
+/* add button for new tweet */
+nav div {  
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
   padding-top: 2em;
 }
-/* add button for new tweet */
 div button {
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-nav button:hover {
-  background-color: #8240a100;
 }
 
 nav i {
@@ -38,7 +42,6 @@ nav i {
   animation: motion 0.3s linear 0s infinite alternate; 
   margin-top: 0;
 }
-
 /* icon angle doble down animation */
 @keyframes motion {
 	0% {padding-top: 0px;}
