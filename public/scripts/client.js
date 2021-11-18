@@ -33,17 +33,18 @@ $(document).ready(function () {
   // AJAX POST request, data will be serialized
   $("form").submit(event => {
     event.preventDefault();
-    $.ajax({
-      url: $(this).attr("action"),
-      method: $(this).attr("method"),
-      data: $(this).serialize(),
-      success: result => {
-        console.log("The ajax call post was successful", result);
-      },
-      error: err => {
-        console.log("There was an error submitting Ajax call ", err);
-      }
-    })
+    // if statement will validate charicter length
+    if ($(".counter").val() > 139) {
+      alert("You can't tweet an empty message!")
+    } else if ($(".counter").val() < 0) {
+      alert("You exceeded maximum message length!")
+    } else {
+      $.ajax({
+        url: $(this).attr("action"),
+        method: $(this).attr("method"),
+        data: $(this).serialize(),
+      })
+    }
   })
 
   // AJAX GET request from "/tweets" and receives array of tweets as JSON 
