@@ -52,9 +52,30 @@ button:hover {
 /* Add space bottom of secction */
 .new-tweet {
   margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* if textarea character is greater than 140, color red */
 .red {
   color: red;
+}
+
+.new-tweet > p {
+  color: red;
+  background-color: rgb(255, 205, 205);
+  border: 3px solid red;
+  border-radius: 10px;
+  width: 50vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+form > label {
+  height: 50px;
 }
