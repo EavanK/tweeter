@@ -10,6 +10,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
   z-index: -1;
   padding-top: 150px;
+  margin-bottom: 60px;
 }
 
 div > h2{
