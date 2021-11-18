@@ -20,11 +20,20 @@ nav {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
-  padding-top: 2.5em;
+  padding-top: 2em;
 }
 
 .fas {
   color: #bf5900;
   display: flex;
+  height: 30px;
   justify-content: center;
+  animation: motion 0.3s linear 0s infinite alternate; 
+  margin-top: 0;
+}
+
+/* icon angle doble down animation */
+@keyframes motion {
+	0% {padding-top: 0px;}
+	100% {padding-top: 5px;}
 }
