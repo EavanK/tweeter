@@ -12,22 +12,29 @@ nav {
   position: fixed;
 }
 
-.logo {
+nav > button {
   font-size: 40px;
 }
 
-.write {
+nav div {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
   padding-top: 2em;
 }
+/* add button for new tweet */
+div button {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
-.fas {
+nav button:hover {
+  background-color: #8240a100;
+}
+
+nav i {
   color: #bf5900;
-  display: flex;
+  align-self: center;
   height: 30px;
-  justify-content: center;
   animation: motion 0.3s linear 0s infinite alternate; 
   margin-top: 0;
 }
