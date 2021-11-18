@@ -49,14 +49,15 @@
     </div>
     <br>
     <div class="avatar-name">
-      <h2>Your Name</h2>
+      <h2>Eavan Kim</h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
     <!-- POST method -->
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <p class="empty-char">&#10071;You are not allowed to post an empty tweet&#10071;</p>
+      <p class="maximum-char">&#10071;Too long. You exceeded our maximum 140 chars&#10071;</p>
       <form method="POST" action="/tweets/">
         <div class="humming">
           <label for="tweet-text"><b>What are you humming about?</b></label>
