@@ -26,10 +26,12 @@ $(document).ready(function () {
     }
   ];
 
+  // Function appends each tweet to .user-tweet from an array of tweets
   const renderTweets = (tweets) => {
     tweets.forEach((user) => $('.user-tweet').append(createTweetElement(user)))
   };
 
+  // Function creates HTML element that will be appended
   const createTweetElement = (tweet) => {
     let $tweet =
       `<article class="tweet">
@@ -52,8 +54,24 @@ $(document).ready(function () {
       </div>
     </footer>
   </article>`;
-
     return $tweet;
-  };
+  };  
+
   renderTweets(data);
+
+  // AJAX POST request
+  $("form").submit(event => {
+    event.preventDefault();
+    $.ajax({
+      url: $(this).attr("action"),
+      method: $(this).attr("method"),
+      data: $(this).serialize(),
+      success: result => {
+        console.log("The ajax call post was successful", result);
+      },
+      error: err => {
+        console.log("There was an error submitting Ajax call ", err);
+      }
+    })
+  })
 });
