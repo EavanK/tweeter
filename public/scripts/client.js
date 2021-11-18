@@ -1,6 +1,9 @@
 $(document).ready(function () {
   // Function prepends each tweet to .user-tweet from an array of tweets
   const renderTweets = tweets => {
+    // empty element inside of '.user-tweet'
+    $('.user-tweet').empty();
+    // then prepend new element inside of '.user-tweet'
     tweets.forEach((user) => $('.user-tweet').prepend(createTweetElement(user)));
   };
 
