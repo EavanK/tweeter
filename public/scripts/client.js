@@ -79,12 +79,12 @@ $(document).ready(function () {
   loadtweets();
 
   // a button to hide and show text area (Write a new tweet)
-  $(".write > button").click(() => {
+  $("nav div").click(() => {
     $(".new-tweet").slideToggle();
   });
   // a button to scroll up to the top (TWEETER)
   $("nav > button").off("click").on("click", () => {
     const offset = $("html").offset();
-    $("html").animate({ scrollTop: offset.top });
+    $("html").animate({ scrollTop: offset.top }, 400);
   });
 });
