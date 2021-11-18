@@ -30,15 +30,21 @@ $(document).ready(function () {
     return $tweet;
   };
 
+  // when web page loads, hide error message
+  $(".new-tweet > p").hide();
   // AJAX POST request, data will be serialized
   $("form").submit(event => {
+    $("textarea").val();
     event.preventDefault();
-    // if statement will validate charicter length
+    // if statement will validate charicter length and show an appropriate error message
     if ($(".counter").val() > 139) {
-      alert("You can't tweet an empty message!");
+      $(".new-tweet > p").hide();
+      $(".empty-char").slideDown("slow");
     } else if ($(".counter").val() < 0) {
-      alert("You exceeded maximum message length!");
+      $(".new-tweet > p").hide();
+      $(".maximum-char").slideDown("slow");
     } else {
+      $(".new-tweet > p").slideUp("slow");
       const formData = $("form").serialize();
       $.ajax({
         url: "/tweets/",
@@ -49,6 +55,9 @@ $(document).ready(function () {
           loadtweets();
         }
       });
+      // after tweet, reset textarea and char-counter
+      $("textarea").val('');
+      $("output").val(140);
     }
   });
 
