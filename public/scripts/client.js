@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  // Function appends each tweet to .user-tweet from an array of tweets
-  const renderTweets = (tweets) => {
-    tweets.forEach((user) => $('.user-tweet').append(createTweetElement(user)))
+  // Function prepends each tweet to .user-tweet from an array of tweets
+  const renderTweets = tweets => {
+    tweets.forEach((user) => $('.user-tweet').prepend(createTweetElement(user)));
   };
 
   // Function creates HTML element that will be appended
-  const createTweetElement = (tweet) => {
+  const createTweetElement = tweet => {
     let $tweet =
       `<article class="tweet">
     <header class="tweet-header">
@@ -35,19 +35,24 @@ $(document).ready(function () {
     event.preventDefault();
     // if statement will validate charicter length
     if ($(".counter").val() > 139) {
-      alert("You can't tweet an empty message!")
+      alert("You can't tweet an empty message!");
     } else if ($(".counter").val() < 0) {
-      alert("You exceeded maximum message length!")
+      alert("You exceeded maximum message length!");
     } else {
+      const formData = $("form").serialize();
       $.ajax({
-        url: $(this).attr("action"),
-        method: $(this).attr("method"),
-        data: $(this).serialize(),
-      })
+        url: "/tweets/",
+        method: "POST",
+        data: formData,
+        success: () => {
+          // prepend/upload tweet to HTML/web page
+          loadtweets();
+        }
+      });
     }
-  })
+  });
 
-  // AJAX GET request from "/tweets" and receives array of tweets as JSON 
+  // AJAX GET request from "/tweets" and receives array of tweets as JSON
   const loadtweets = () => {
     $.ajax({
       url: "/tweets",
@@ -57,7 +62,7 @@ $(document).ready(function () {
       .then((data) => {
         // append data to HTML
         renderTweets(data);
-      })
-  }
+      });
+  };
   loadtweets();
 });
