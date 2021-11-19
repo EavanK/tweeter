@@ -1,26 +1,26 @@
 $(document).ready(function () {
   // Function prepends each tweet to .user-tweet from an array of tweets
-  const renderTweets = tweets => {
+  const $renderTweets = tweets => {
     // empty element inside of '.user-tweet'
     $('.user-tweet').empty();
     // then prepend new element inside of '.user-tweet'
-    tweets.forEach((user) => $('.user-tweet').prepend(createTweetElement(user)));
+    tweets.forEach((user) => $('.user-tweet').prepend($createTweetElement(user)));
   };
 
   // Function creates HTML element that will be appended
-  const createTweetElement = tweet => {
+  const $createTweetElement = tweet => {
     let $tweet =
-      `<article class="tweet">
-    <header class="tweet-header">
+      `<article>
+    <header>
       <div>
         <img src=${tweet.user.avatars} width="60" height="60">
-        <span class="name">${tweet.user.name}</span>
+        <span>${tweet.user.name}</span>
       </div>
       <span class="user-link">${tweet.user.handle}</span>
     </header>
-    <main class="tweet-main">
+    <body>
       <p>${tweet.content.text}</p>
-    </main>
+    </body>
     <footer>
       <span class="need_to_be_rendered">${timeago.format(`${tweet.created_at}`)}</span>
       <div class="icon">
@@ -34,28 +34,28 @@ $(document).ready(function () {
   };
 
   // when web page loads, hide error message
-  $(".new-tweet > p").hide();
+  $("section > p").hide();
   // AJAX POST request, data will be serialized
   $("form").submit(event => {
     $("textarea").val();
     event.preventDefault();
     // if statement will validate charicter length and show an appropriate error message
     if ($(".counter").val() > 139) {
-      $(".new-tweet > p").hide();
+      $("section > p").hide();
       $(".empty-char").slideDown("slow");
     } else if ($(".counter").val() < 0) {
-      $(".new-tweet > p").hide();
+      $("section > p").hide();
       $(".maximum-char").slideDown("slow");
     } else {
-      $(".new-tweet > p").slideUp("slow");
-      const formData = $("form").serialize();
+      $("section > p").slideUp("slow");
+      const $formData = $("form").serialize();
       $.ajax({
         url: "/tweets/",
         method: "POST",
-        data: formData,
+        data: $formData,
         success: () => {
           // prepend/upload tweet to HTML/web page
-          loadtweets();
+          $loadtweets();
         }
       });
       // after tweet, reset textarea and char-counter
@@ -65,7 +65,7 @@ $(document).ready(function () {
   });
 
   // AJAX GET request from "/tweets" and receives array of tweets as JSON
-  const loadtweets = () => {
+  const $loadtweets = () => {
     $.ajax({
       url: "/tweets",
       method: "GET",
@@ -73,18 +73,8 @@ $(document).ready(function () {
     })
       .then((data) => {
         // append data to HTML
-        renderTweets(data);
+        $renderTweets(data);
       });
   };
-  loadtweets();
-
-  // a button to hide and show text area (Write a new tweet)
-  $("nav div").click(() => {
-    $(".new-tweet").slideToggle();
-  });
-  // a button to scroll up to the top (TWEETER)
-  $("nav > button").off("click").on("click", () => {
-    const offset = $("html").offset();
-    $("html").animate({ scrollTop: offset.top }, 400);
-  });
+  $loadtweets();
 });
