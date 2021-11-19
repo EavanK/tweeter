@@ -2,17 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
-  width: 100%;
   color: #FFFFFF;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #bf5900;
+  background-color: #5adddd;
   background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
-  z-index: -1;
-  padding-top: 150px;
+  padding-top: 90px;
   margin-bottom: 60px;
 }
 
 div > h2{
   margin-top: 0
+}
+
+/* add responsive design break point for desktop */
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 30%;
+    height: 20%;
+    float: left;
+    border-style: dotted;
+    padding-top: 50px;
+    margin-left: 5%;
+  }
 }
