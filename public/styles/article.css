@@ -1,53 +1,43 @@
 /* article */
-.tweet {
-  background-color: #fce6c3;
+article {
+  /* background-color: #fce6c3; */
   width: 90vw;
   border:5px solid #545149;
   margin-top: 1em;
-  margin-bottom: 1em;
-  color: #545149;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.tweet:hover {
+article:hover {
   box-shadow: 5px 10px #c7c7c7;
 }
 /* header */
-.tweet-header {
+article header {
   width: 83vw;
-  height: 10vh;
   padding-top: 1em;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-content: center;
 }
+
 /* main */
-.tweet-main {
+p {
   width: 85vw;
   border-bottom: 5px solid #545149;
   padding: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
   font-weight: bold;
 }
 /*img and name */
-div {
+article div {
   display: flex;
 }
 /* user name */
-.name {
-  margin-top: 0;
+header div span {
   padding-left: 0.5em;
-  display: flex;
   align-self: center;
 }
 /* user ID */
-.user-link {
+header > span {
   color: #c7c7c7;
-  size: 2em;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -59,16 +49,38 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 /* icon */
-.icon {
+footer div {
   color: #4056A1;
-  width: 8vw;
-  display: flex;
+  width: 90px;
   justify-content: space-between;
 }
 /* each icon hover */
-.icon > i:hover {
+footer div > i:hover {
   color: #b151c9;
+}
+
+/* add responsive design break point for desktop */
+@media only screen and (min-width: 1024px) {
+  .user-tweet {
+    width: 60vw;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  article {
+    width: 50vw;
+  }
+  article header {
+    width: 45vw;
+  }
+  p {
+    width: 45vw;
+  }
+  footer {
+    width: 45vw;
+  }
 }
