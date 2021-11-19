@@ -1,7 +1,7 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #4057a100;
   font-family: 'Bungee', cursive;
   padding-right: 1.5em;
   padding-left: 1.5em;
@@ -11,39 +11,30 @@ nav {
   position: fixed;
 }
 
-nav button {
-  background-color: #4056A1;
-  border: none;
-  color: #FFFFFF
-}
-nav button:hover {
-  background-color: #8240a100;
-}
-
-nav > button {
-  font-size: 40px;
-}
-
-/* add button for new tweet */
-nav div {  
-  font-family: 'Source Sans Pro', sans-serif;
+body > div {
   display: flex;
-  flex-direction: column;
-  padding-top: 2em;
-}
-div button {
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 nav i {
-  color: #bf5900;
+  color: yellowgreen;
   align-self: center;
   height: 30px;
   animation: motion 0.3s linear 0s infinite alternate; 
-  margin-top: 0;
 }
+
 /* icon angle doble down animation */
 @keyframes motion {
 	0% {padding-top: 0px;}
 	100% {padding-top: 5px;}
+}
+
+/* add responsive design break point for desktop */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+  /* for space between nav and header tags */
+  body > div {
+    margin-bottom: 250px;
+  }
 }
