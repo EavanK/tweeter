@@ -14,20 +14,23 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-* Screen for Tablet
-!["home page"](https://github.com/EavanK/tweeter/blob/master/docs/home%20page.png?raw=true)
+1. Screen for desktop
+!["desktop"](https://github.com/EavanK/tweeter/blob/master/docs/1_screen_for_desktop.png?raw=true)
 
-* Screen for Desktop
-!["screen for desktop"](https://github.com/EavanK/tweeter/blob/master/docs/screen%20for%20desktop.png?raw=true)
+2. Screen for tablet
+!["tablet"](https://github.com/EavanK/tweeter/blob/master/docs/2_screen_for_tablet.png?raw=true)
 
-* Tweet messages
-!["tweets"](https://github.com/EavanK/tweeter/blob/master/docs/tweets.png?raw=true)
+3. Upload new tweet
+!["new-tweet"](https://github.com/EavanK/tweeter/blob/master/docs/3_upload_newtweet.gif?raw=true)
 
-* Top button
-!["top button"](https://github.com/EavanK/tweeter/blob/master/docs/top%20button.png?raw=true)
+4. Button for hiding/showing textarea
+!["hide/show"](https://github.com/EavanK/tweeter/blob/master/docs/4_show&hide_button.gif?raw=true)
 
-* Error message
-!["error message"](https://github.com/EavanK/tweeter/blob/master/docs/error%20message.png?raw=true)
+5. Buttons navigates to the top
+!["button-to-top"](https://github.com/EavanK/tweeter/blob/master/docs/6_buttons_navigate_top.gif?raw=true)
+
+6. Error message
+!["error message"](https://github.com/EavanK/tweeter/blob/master/docs/5_error_message.gif?raw=true)
 
 ## Dependencies
 
