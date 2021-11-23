@@ -16,7 +16,7 @@ body > div {
 }
 
 nav i {
-  color: yellowgreen;
+  color: #bcaaa4;
   align-self: center;
   height: 30px;
   animation: motion 0.3s linear 0s infinite alternate; 
@@ -31,7 +31,7 @@ nav i {
 /* add responsive design break point for desktop */
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: #4b2c20;
   }
   /* for space between nav and header tags */
   body > div {

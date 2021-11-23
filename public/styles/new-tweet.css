@@ -6,7 +6,7 @@ main {
 
 textarea {
   width: 90vw;
-  background-color: #fce6c3;
+  background-color: #bcaaa4;
   border: none;
   resize: none;
   border-bottom: 5px solid #545149;
@@ -41,7 +41,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 .active button {
-  background-color: #4056A1;
+  background-color: #4b2c20;
   border: none;
   border-radius: 5px;
   color: #FFFFFF;
@@ -52,7 +52,7 @@ textarea::-webkit-scrollbar-track {
   padding-bottom: 3px;
 }
 .active button:hover {
-  background-color: #000836;
+  background-color: #725b53;
 }
 
 /* if textarea character is greater than 140, color red. using in client.js*/

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: #FFFFFF;
-  background-color: #5adddd;
+  background-color: #725b53;
   background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
   padding-top: 90px;
   margin-bottom: 60px;
@@ -19,6 +19,7 @@ div > h2{
     width: 30%;
     height: 20%;
     float: left;
+    border-radius: 200px;
     border-style: dotted;
     padding-top: 50px;
     margin-left: 5%;

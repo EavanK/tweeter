@@ -1,6 +1,6 @@
 /* article */
 article {
-  /* background-color: #fce6c3; */
+  background-color: #efdcd5;
   width: 90vw;
   border:5px solid #545149;
   margin-top: 1em;
@@ -53,7 +53,7 @@ footer {
 }
 /* icon */
 footer div {
-  color: #4056A1;
+  color: #4b2c20;
   width: 90px;
   justify-content: space-between;
 }
